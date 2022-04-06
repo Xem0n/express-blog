@@ -1,4 +1,9 @@
-import express from 'express';
+// todo:
+// add .env support
+// setup db (mariadb maybe)
+// add template engine
+
+const express = require('express');
 
 const app = express();
 const PORT = 8000;
