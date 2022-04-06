@@ -4,13 +4,12 @@
 // add template engine
 
 import express from 'express';
+import index from './routes/index';
 
 const app = express();
 const PORT = 8000;
 
-app.get('/', (req, res) => {
-    res.send('yo yo yo');
-});
+app.get('/', index);
 
 app.listen(PORT, () => {
     console.log(`server is runnig at port: ${PORT}`);
