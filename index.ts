@@ -9,6 +9,9 @@ import index from './routes/index';
 const app = express();
 const PORT = 8000;
 
+app.set('views', './views');
+app.set('view engine', 'pug');
+
 app.get('/', index);
 
 app.listen(PORT, () => {
