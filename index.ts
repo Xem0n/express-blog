@@ -3,7 +3,7 @@
 // setup db (mariadb maybe)
 // add template engine
 
-const express = require('express');
+import express from 'express';
 
 const app = express();
 const PORT = 8000;
