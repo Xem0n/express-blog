@@ -4,11 +4,13 @@
 // add template engine
 
 import express from 'express';
+import path from 'path';
 import index from './routes/index';
 
 const app = express();
 const PORT = 8000;
 
+app.use(express.static(path.join(__dirname, 'public')));
 app.set('views', './views');
 app.set('view engine', 'pug');
 
