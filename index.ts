@@ -14,7 +14,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.set('views', './views');
 app.set('view engine', 'pug');
 
-app.get('/', index);
+app.use('/', index);
 
 app.listen(PORT, () => {
     console.log(`server is runnig at port: ${PORT}`);
