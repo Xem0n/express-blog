@@ -1,7 +1,5 @@
 // todo:
-// add .env support
 // setup db (mariadb maybe)
-// add template engine
 
 import 'dotenv/config';
 import express from 'express';
