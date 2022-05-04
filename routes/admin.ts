@@ -4,11 +4,11 @@ import {} from '../types/session';
 const router = express.Router();
 
 const authenticate = (req: Request): boolean => {
-    if (req.session.user) {
-        return req.session.user !== null && req.session.user !== undefined;
+    if (req.url === '/login') {
+        return true;
     }
 
-    return req.url === '/login';
+    return req.session.user !== null && req.session.user !== undefined;
 };
 
 router.use('/', (req, res, next) => {
