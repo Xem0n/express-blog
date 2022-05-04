@@ -13,7 +13,7 @@ const authenticate = (req: Request): boolean => {
 
 router.use('/', (req, res, next) => {
     if (!authenticate(req)) {
-        res.redirect('/admin/login');
+        return res.redirect('/admin/login');
     }
 
     next();
