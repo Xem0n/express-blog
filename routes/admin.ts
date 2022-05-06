@@ -18,7 +18,7 @@ const authenticate = (req: Request): boolean => {
     return req.session.user !== null && req.session.user !== undefined;
 };
 
-router.use('/', (req, res, next) => {
+router.use((req, res, next) => {
     if (!authenticate(req)) {
         return res.redirect('/admin/login');
     }
