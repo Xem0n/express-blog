@@ -1,4 +1,5 @@
 import express, { Request } from 'express';
+import IFormRequest from '../types/form';
 import {} from '../types/session';
 
 const router = express.Router();
@@ -32,6 +33,10 @@ router.get('/', (req, res) => {
 
 router.get('/login', (req, res) => {
     res.render('admin/login');
+});
+
+router.post('/login', (req: IFormRequest, res) => {
+    res.send('process form data...');
 });
 
 router.get('/register', (req, res) => {
