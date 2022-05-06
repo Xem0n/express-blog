@@ -5,4 +5,9 @@ block head
     script(src='/scripts/form.js', defer)
 
 block content
-    p login
+    form(method='post', action='').form
+        div.info Sign into your account!
+
+        input(type='email', name='email', id='email', placeholder='Input your email')
+        input(type='password', name='password', id='password', placeholder='Input your password')
+        input(type='submit', value='Log In')
