@@ -3,6 +3,8 @@ import {} from '../types/session';
 
 const router = express.Router();
 
+router.use(express.urlencoded({ extended: true }));
+
 const safeUrls = [
     '/login',
     '/register'
