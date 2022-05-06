@@ -29,11 +29,11 @@ router.get('/', (req, res) => {
 });
 
 router.get('/login', (req, res) => {
-    res.send('login');
+    res.render('admin/login');
 });
 
 router.get('/register', (req, res) => {
-    res.send('register');
+    res.render('admin/register');
 });
 
 export default router;
