@@ -26,5 +26,5 @@ app.use('/', index);
 app.use('/admin', admin);
 
 app.listen(port, () => {
-    console.log(`server is runnig at port: ${port}`);
+    console.log(`server is running at port: ${port}`);
 });
