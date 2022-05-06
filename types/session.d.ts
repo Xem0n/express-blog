@@ -1,9 +1,13 @@
+import { Request } from 'express';
+import { Session } from 'express-session';
 import User from '../models/user';
 
-declare module 'express-session' {
-    interface Session {
-        user?: User;
-    }
+interface ISession extends Session {
+    user?: User;
 }
 
-export {};
+interface ISessionRequest extends Request {
+    session: ISession;
+}
+
+export default ISessionRequest;

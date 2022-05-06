@@ -1,6 +1,6 @@
-import express, { Request } from 'express';
+import express from 'express';
 import IFormRequest from '../types/form';
-import {} from '../types/session';
+import ISessionRequest from '../types/session';
 
 const router = express.Router();
 
@@ -11,7 +11,7 @@ const safeUrls = [
     '/register'
 ];
 
-const authenticate = (req: Request): boolean => {
+const authenticate = (req: ISessionRequest): boolean => {
     if (safeUrls.includes(req.url)) {
         return true;
     }
