@@ -3,8 +3,13 @@ import {} from '../types/session';
 
 const router = express.Router();
 
+const safeUrls = [
+    '/login',
+    '/register'
+];
+
 const authenticate = (req: Request): boolean => {
-    if (req.url === '/login') {
+    if (safeUrls.includes(req.url)) {
         return true;
     }
 
