@@ -1,4 +1,9 @@
-extends /includes/layout.pug
+extends includes/form.pug
 
-block content
-    p register
+block form
+    div.info Create your own account!
+
+    input(type='email', name='email', id='email', placeholder='Input your email', required)
+    input(type='password', name='password', id='password', placeholder='Input your password', required)
+    input(type='password', name='confirmedPassword', id='confirmedPassword', placeholder='Repeat your password', required)
+    input(type='submit', value='Sign Up')

@@ -1,13 +1,8 @@
-extends /includes/layout.pug
+extends includes/form.pug
 
-block head
-    link(rel='stylesheet', href='/stylesheets/form.css')
-    script(src='/scripts/form.js', defer)
+block form
+    div.info Sign into your account!
 
-block content
-    form(method='post', action='').form
-        div.info Sign into your account!
-
-        input(type='email', name='email', id='email', placeholder='Input your email', required)
-        input(type='password', name='password', id='password', placeholder='Input your password', required)
-        input(type='submit', value='Log In')
+    input(type='email', name='email', id='email', placeholder='Input your email', required)
+    input(type='password', name='password', id='password', placeholder='Input your password', required)
+    input(type='submit', value='Log In')
