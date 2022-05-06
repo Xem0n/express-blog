@@ -1,0 +1,66 @@
+main {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.form {
+    width: 450px;
+    max-width: 95%;
+    min-height: 500px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+
+    margin-top: 50px;
+
+    border: 2px solid black;
+    border-bottom: 5px solid black;
+    background: transparent;
+}
+
+.form > * {
+    margin: 8px auto;
+
+    font-size: 1rem;
+}
+
+.form > input {
+    background: none;
+    border: none;
+    outline: 0;
+    font-family: inherit;
+
+    width: 220px;
+    max-width: 95%;
+    
+    height: 40px;
+
+    border: 2px solid #a7a7a7;
+}
+
+.form > input.not-empty {
+    border-color: black;
+}
+
+.form > input[type="email"],
+.form > input[type="password"] {
+    padding: 10px;
+}
+
+.form > input[type="submit"] {
+    color: white;
+    background: black;
+    border: none;
+
+    cursor: pointer;
+
+    transition: color 0.3s;
+}
+
+.form > input[type="submit"]:hover {
+    color: #cacaca;
+}
