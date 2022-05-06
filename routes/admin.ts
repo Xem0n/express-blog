@@ -43,4 +43,8 @@ router.get('/register', (req, res) => {
     res.render('admin/register');
 });
 
+router.post('/register', (req, res) => {
+    res.send('process form data...');
+});
+
 export default router;
