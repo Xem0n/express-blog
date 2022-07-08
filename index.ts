@@ -6,11 +6,15 @@ import express from 'express';
 import session from 'express-session';
 import path from 'path';
 
+import setupDB from './db/setup';
+
 import index from './routes/index';
 import admin from './routes/admin';
 
 const app = express();
 const port = process.env.PORT ?? 8000;
+
+setupDB();
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('views', './views');
