@@ -13,7 +13,9 @@ const createTables = async (conn: PoolConnection) => {
                 last_login datetime NOT NULL,
                 nickname varchar(64),
                 name varchar(128),
-                surname varchar(128)
+                surname varchar(128),
+                verified bool DEFAULT false,
+                superadmin bool DEFAULT false
             )`
         );
         await conn.commit();
