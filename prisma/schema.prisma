@@ -11,14 +11,14 @@ datasource db {
 }
 
 model User {
-  id Int @id @default(autoincrement())
-  email String @unique
-  password String
+  id           Int      @id @default(autoincrement())
+  email        String   @unique
+  password     String
   registerTime DateTime @default(now())
-  lastLogin DateTime @default(now())
-  nickname String?
-  name String?
-  surname String?
-  isVerified Boolean @default(false)
-  isSuperadmin Boolean @default(false)
+  lastLogin    DateTime @default(now())
+  nickname     String?
+  name         String?
+  surname      String?
+  isVerified   Boolean  @default(false)
+  isSuperadmin Boolean  @default(false)
 }
